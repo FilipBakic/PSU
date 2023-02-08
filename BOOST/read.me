@@ -1,1 +1,46 @@
+skripta za racunanje reaktivnih elemenata
 
+syms Rl f L D
+eq=Rl*D*(1-D)/2/L/f
+a=solve(eq==0.1,L)
+
+Rl=24
+f=100e3
+D=0.56
+eval(a)
+
+
+syms Rl f L D C Vi 
+eq2=Vi/Rl*(D/f/C/(1-D))
+a=solve(eq2==0.04,C)
+Rl=24
+Vi=12
+f=100e3
+D=0.56
+
+eval(a)
+
+
+Dobijene vrednosti iz jednacina za ripl struje / napona busta
+
+C=200uF
+L=300uH
+Fr=650Hz- rezonancija ta dva
+
+neka random dioda nisam trazio da proveravam
+vd=0.7;     % V
+Rd=0.6;     % Ohm
+
+nasao u nakom datesheetu prigusnice
+Rl=0.1;     % Ohm
+
+vise odgova bipolarnom tranzistoru al da ne bude 0.05
+Ron=0.2;      % Ohm
+
+Neke standardne vrednosti pojacanje 2 puta
+Vi=12V
+Vo=24V
+
+
+Opterecenje
+R=24 Ohm, nek bude lepo 1A kroz otpornik sta mu fali 24W sve da bude fino
